@@ -4,11 +4,8 @@
 [ext_resource type="StyleBox" uid="uid://hjtwi4stcxmu" path="res://addons/curved_lines_2d/styleboxes/button_default_stylebox.tres" id="2_2chn8"]
 [ext_resource type="StyleBox" uid="uid://ddx1ye7r3r4lf" path="res://addons/curved_lines_2d/styleboxes/button_pressed_stylebox.tres" id="3_hti8q"]
 [ext_resource type="StyleBox" uid="uid://bo0x8scw4k70k" path="res://addons/curved_lines_2d/styleboxes/button_hover_stylebox.tres" id="4_powka"]
-[ext_resource type="Script" uid="uid://de3jpss66xjfh" path="res://addons/curved_lines_2d/scalable_vector_shape_2d.gd" id="6_25oso"]
 [ext_resource type="Texture2D" uid="uid://ulvclg7al5cu" path="res://addons/curved_lines_2d/IconAtlas.svg" id="6_h5wiq"]
-[ext_resource type="Script" uid="uid://dlbv4pit17dnu" path="res://addons/curved_lines_2d/scalable_arc.gd" id="7_4nv23"]
 [ext_resource type="StyleBox" uid="uid://c034pktje23oe" path="res://addons/curved_lines_2d/styleboxes/editor_spin_box_container_stylebox.tres" id="7_powka"]
-[ext_resource type="Script" uid="uid://dl1t88tthmwts" path="res://addons/curved_lines_2d/scalable_arc_list.gd" id="8_a0xul"]
 [ext_resource type="PackedScene" uid="uid://cjbkvx1pj7gq2" path="res://addons/curved_lines_2d/collision_object_type_option_button.tscn" id="20_rpvk4"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_dsrm6"]
@@ -76,60 +73,6 @@ region = Rect2(32, 80, 16, 16)
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_dv24s"]
 color = Color(0.22352941, 0.22352941, 0.22352941, 1)
-
-[sub_resource type="Curve2D" id="Curve2D_h5wiq"]
-resource_local_to_scene = true
-
-[sub_resource type="Resource" id="Resource_4mrje"]
-resource_local_to_scene = true
-script = ExtResource("8_a0xul")
-
-[sub_resource type="Curve2D" id="Curve2D_25oso"]
-resource_local_to_scene = true
-
-[sub_resource type="Resource" id="Resource_4nv23"]
-resource_local_to_scene = true
-script = ExtResource("8_a0xul")
-
-[sub_resource type="Curve2D" id="Curve2D_4nv23"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0)
-}
-point_count = 1
-
-[sub_resource type="Resource" id="Resource_a0xul"]
-resource_local_to_scene = true
-script = ExtResource("8_a0xul")
-
-[sub_resource type="Curve2D" id="Curve2D_4mrje"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0)
-}
-point_count = 1
-
-[sub_resource type="Resource" id="Resource_w8ysd"]
-resource_local_to_scene = true
-script = ExtResource("8_a0xul")
-
-[sub_resource type="Curve2D" id="Curve2D_v84w2"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0)
-}
-point_count = 1
-
-[sub_resource type="Resource" id="Resource_6gyyp"]
-resource_local_to_scene = true
-script = ExtResource("8_a0xul")
-
-[sub_resource type="Curve2D" id="Curve2D_vur25"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0)
-}
-point_count = 1
-
-[sub_resource type="Resource" id="Resource_pa8xa"]
-resource_local_to_scene = true
-script = ExtResource("8_a0xul")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_alf1c"]
 atlas = ExtResource("6_h5wiq")
@@ -506,56 +449,6 @@ popup/item_0/id = 0
 popup/item_1/text = "Rectangle Brush"
 popup/item_1/id = 1
 
-[node name="BrushStroke" type="Node2D" parent="ToolsContainer/MarginContainer/BrushToolContainer/VBoxContainer/BrushShapeOptionButton" unique_id=1239562733 node_paths=PackedStringArray("polygon", "line")]
-position = Vector2(571, 21)
-script = ExtResource("6_25oso")
-polygon = NodePath("Fill")
-stroke_color = Color(0, 0, 0, 1)
-stroke_width = 1.0
-begin_cap_mode = 1
-end_cap_mode = 1
-extrusion_direction = 2
-line = NodePath("Stroke")
-curve = SubResource("Curve2D_h5wiq")
-update_curve_at_runtime = true
-arc_list = SubResource("Resource_4mrje")
-
-[node name="Fill" type="Polygon2D" parent="ToolsContainer/MarginContainer/BrushToolContainer/VBoxContainer/BrushShapeOptionButton/BrushStroke" unique_id=1293401150]
-metadata/_edit_lock_ = true
-
-[node name="Stroke" type="Line2D" parent="ToolsContainer/MarginContainer/BrushToolContainer/VBoxContainer/BrushShapeOptionButton/BrushStroke" unique_id=1154018501]
-width = 1.0
-default_color = Color(0, 0, 0, 1)
-begin_cap_mode = 1
-end_cap_mode = 1
-sharp_limit = 90.0
-metadata/_edit_lock_ = true
-
-[node name="BrushStroke2" type="Node2D" parent="ToolsContainer/MarginContainer/BrushToolContainer/VBoxContainer/BrushShapeOptionButton" unique_id=2135620062 node_paths=PackedStringArray("polygon", "line")]
-position = Vector2(621, 21)
-script = ExtResource("6_25oso")
-polygon = NodePath("Fill")
-stroke_color = Color(0, 0, 0, 1)
-stroke_width = 1.0
-begin_cap_mode = 1
-end_cap_mode = 1
-extrusion_direction = 2
-line = NodePath("Stroke")
-curve = SubResource("Curve2D_25oso")
-update_curve_at_runtime = true
-arc_list = SubResource("Resource_4nv23")
-
-[node name="Fill" type="Polygon2D" parent="ToolsContainer/MarginContainer/BrushToolContainer/VBoxContainer/BrushShapeOptionButton/BrushStroke2" unique_id=1699366524]
-metadata/_edit_lock_ = true
-
-[node name="Stroke" type="Line2D" parent="ToolsContainer/MarginContainer/BrushToolContainer/VBoxContainer/BrushShapeOptionButton/BrushStroke2" unique_id=820400952]
-width = 1.0
-default_color = Color(0, 0, 0, 1)
-begin_cap_mode = 1
-end_cap_mode = 1
-sharp_limit = 90.0
-metadata/_edit_lock_ = true
-
 [node name="HFlowContainer2" type="HFlowContainer" parent="ToolsContainer/MarginContainer/BrushToolContainer/VBoxContainer" unique_id=281114164]
 layout_mode = 2
 
@@ -638,106 +531,6 @@ custom_maximum_size = Vector2(368, -1)
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_styles/panel = ExtResource("7_powka")
-
-[node name="PencilDrawing" type="Node2D" parent="ToolsContainer/MarginContainer/PencilToolContainer/VBoxContainer/PencilGranularity" unique_id=873147798 node_paths=PackedStringArray("polygon", "line")]
-position = Vector2(671, -138)
-script = ExtResource("6_25oso")
-polygon = NodePath("Fill")
-stroke_color = Color(0, 0, 0, 1)
-stroke_width = 1.0
-begin_cap_mode = 1
-end_cap_mode = 1
-extrusion_direction = 2
-line = NodePath("Stroke")
-curve = SubResource("Curve2D_4nv23")
-update_curve_at_runtime = true
-arc_list = SubResource("Resource_a0xul")
-
-[node name="Fill" type="Polygon2D" parent="ToolsContainer/MarginContainer/PencilToolContainer/VBoxContainer/PencilGranularity/PencilDrawing" unique_id=1083899031]
-metadata/_edit_lock_ = true
-
-[node name="Stroke" type="Line2D" parent="ToolsContainer/MarginContainer/PencilToolContainer/VBoxContainer/PencilGranularity/PencilDrawing" unique_id=451607751]
-width = 1.0
-default_color = Color(0, 0, 0, 1)
-begin_cap_mode = 1
-end_cap_mode = 1
-sharp_limit = 90.0
-metadata/_edit_lock_ = true
-
-[node name="PencilDrawing2" type="Node2D" parent="ToolsContainer/MarginContainer/PencilToolContainer/VBoxContainer/PencilGranularity" unique_id=2011316128 node_paths=PackedStringArray("polygon", "line")]
-position = Vector2(571, 7)
-script = ExtResource("6_25oso")
-polygon = NodePath("Fill")
-stroke_color = Color(0, 0, 0, 1)
-stroke_width = 1.0
-begin_cap_mode = 1
-end_cap_mode = 1
-extrusion_direction = 2
-line = NodePath("Stroke")
-curve = SubResource("Curve2D_4mrje")
-update_curve_at_runtime = true
-arc_list = SubResource("Resource_w8ysd")
-
-[node name="Fill" type="Polygon2D" parent="ToolsContainer/MarginContainer/PencilToolContainer/VBoxContainer/PencilGranularity/PencilDrawing2" unique_id=1019181685]
-metadata/_edit_lock_ = true
-
-[node name="Stroke" type="Line2D" parent="ToolsContainer/MarginContainer/PencilToolContainer/VBoxContainer/PencilGranularity/PencilDrawing2" unique_id=522619892]
-width = 1.0
-default_color = Color(0, 0, 0, 1)
-begin_cap_mode = 1
-end_cap_mode = 1
-sharp_limit = 90.0
-metadata/_edit_lock_ = true
-
-[node name="PencilDrawing3" type="Node2D" parent="ToolsContainer/MarginContainer/PencilToolContainer/VBoxContainer/PencilGranularity" unique_id=913045262 node_paths=PackedStringArray("polygon", "line")]
-position = Vector2(417, -232)
-script = ExtResource("6_25oso")
-polygon = NodePath("Fill")
-stroke_color = Color(0, 0, 0, 1)
-stroke_width = 1.0
-begin_cap_mode = 1
-end_cap_mode = 1
-extrusion_direction = 2
-line = NodePath("Stroke")
-curve = SubResource("Curve2D_v84w2")
-update_curve_at_runtime = true
-arc_list = SubResource("Resource_6gyyp")
-
-[node name="Fill" type="Polygon2D" parent="ToolsContainer/MarginContainer/PencilToolContainer/VBoxContainer/PencilGranularity/PencilDrawing3" unique_id=1132549791]
-metadata/_edit_lock_ = true
-
-[node name="Stroke" type="Line2D" parent="ToolsContainer/MarginContainer/PencilToolContainer/VBoxContainer/PencilGranularity/PencilDrawing3" unique_id=550281086]
-width = 1.0
-default_color = Color(0, 0, 0, 1)
-begin_cap_mode = 1
-end_cap_mode = 1
-sharp_limit = 90.0
-metadata/_edit_lock_ = true
-
-[node name="PencilDrawing4" type="Node2D" parent="ToolsContainer/MarginContainer/PencilToolContainer/VBoxContainer/PencilGranularity" unique_id=687395421 node_paths=PackedStringArray("polygon", "line")]
-position = Vector2(234, 2)
-script = ExtResource("6_25oso")
-polygon = NodePath("Fill")
-stroke_color = Color(0, 0, 0, 1)
-stroke_width = 1.0
-begin_cap_mode = 1
-end_cap_mode = 1
-extrusion_direction = 2
-line = NodePath("Stroke")
-curve = SubResource("Curve2D_vur25")
-update_curve_at_runtime = true
-arc_list = SubResource("Resource_pa8xa")
-
-[node name="Fill" type="Polygon2D" parent="ToolsContainer/MarginContainer/PencilToolContainer/VBoxContainer/PencilGranularity/PencilDrawing4" unique_id=339768133]
-metadata/_edit_lock_ = true
-
-[node name="Stroke" type="Line2D" parent="ToolsContainer/MarginContainer/PencilToolContainer/VBoxContainer/PencilGranularity/PencilDrawing4" unique_id=1161406481]
-width = 1.0
-default_color = Color(0, 0, 0, 1)
-begin_cap_mode = 1
-end_cap_mode = 1
-sharp_limit = 90.0
-metadata/_edit_lock_ = true
 
 [node name="HFlowContainer2" type="HFlowContainer" parent="ToolsContainer/MarginContainer/PencilToolContainer/VBoxContainer" unique_id=616325953]
 layout_mode = 2
